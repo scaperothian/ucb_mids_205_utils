@@ -13,9 +13,6 @@ tmux detach-client -s neo4j
 echo "pause while neo4j comes up."
 sleep 2
 
-echo "pause while postgres comes up."
-sleep 2
-
 tmux new-session -d -s jupyter
 
 tmux send-keys -t jupyter "cd /home/w205/docker/clusters/anaconda_neo4j" Enter
